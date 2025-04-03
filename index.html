@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #F5EBEB;
+            justify-items: center;
+            margin-top: 150px;
+        }
+        h2 {
+            text-align: center;
+            color: #987070;
+        }
+        p{
+            font-size: large;
+        }
+        input {
+            height: 20px;
+        }
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+            background-color: #E4D0D0;
+            border-color: #987070;
+        }
+        #content {
+            margin: 10px;
+        }
+        .container {
+            border-style: solid;
+            border-color: #987070;
+            background-color: #E4D0D0;
+            height: auto;
+            width: 610px;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Bucket List -->
+    <div class="container">
+        <div class="container-list">
+            <h2 id="title">Jairrah's Bucket List</h2>
+            <ul>
+                <li>
+                    To graduate with honors.
+                </li>
+                <li>
+                    I want to explore Japan.
+                </li>
+                <li>
+                    Buy a house and lot.
+                </li>
+                <li>
+                    Finish this course.
+                </li>
+            </ul>  
+        </div>
+    </div>
+
+    <!-- Input Field -->
+    <p>
+        Add new item on your Bucket List: <input type="text" id="newItemOnList" placeholder="Add new here">
+    </p>
+
+    <!-- Buttons -->
+    <button id="demoButton" onclick="addNewElement()">Add new item on the List</button>
+    <button id="demoButton" onclick="changeFontFamily()">Change Font Family</button>
+    <button id="demoButton" onclick="textAppearBold()">Change Font Weight</button>
+
+    <!-- Script -->
+    <script>
+        function addNewElement() {
+            var myInput = document.getElementById("newItemOnList").value;
+            var ul = document.querySelector('ul');
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(myInput));
+            ul.appendChild(li);
+        }
+
+        function changeFontFamily() {
+            document.querySelector('ul').style.fontFamily = 'Courier New';
+        }
+
+        function textAppearBold() {
+            document.querySelector('ul').style.fontWeight = 'Bold'
+        }
+    </script>
+
+</body>
+</html>
+
